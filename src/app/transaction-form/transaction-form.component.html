@@ -1,0 +1,26 @@
+<form [formGroup]="nameForm" (ngSubmit)="onSubmit()">
+    <input type="date" placeholder="Enter the date" formControlName="date" />
+  
+    <!-- {{ "Invalid: " + date?.invalid }} {{ "Touched: " + date?.touched }} -->
+    <div *ngIf="date?.invalid && date?.touched">
+      <p *ngIf="date?.errors?.['required']">Why to fill this date😉?</p>
+    </div>
+    <input type="number" placeholder="Enter the amount" formControlName="amount" />
+  
+    <!-- {{ "Invalid: " + date?.invalid }} {{ "Touched: " + date?.touched }} -->
+    <div *ngIf="amount?.invalid && amount?.touched">
+      <p *ngIf="amount?.errors?.['required']">Why to fill this amount😉?</p>
+    </div>
+  
+    <input type="text" placeholder="Enter your category" formControlName="category" />
+    <!-- <p *ngIf="nameForm.get('age')?.errors?.['required']">
+      Why to fill this age 😉?
+    </p> -->
+  
+    <!-- {{ "Invalid: " + age?.invalid }} {{ "Touched: " + age?.touched }} -->
+    <!-- Error && Touch => Better UX  -->
+    <div *ngIf="category?.invalid && category?.touched">
+      <p *ngIf="category?.errors?.['required']">Why to fill this category 😉?</p>
+    </div>
+    <button type="submit" [disabled]="nameForm.invalid">create</button>
+  </form>

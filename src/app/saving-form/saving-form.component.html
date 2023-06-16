@@ -1,0 +1,28 @@
+<form [formGroup]="nameForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Enter the name" formControlName="name" />
+  
+    <!-- {{ "Invalid: " + name?.invalid }} {{ "Touched: " + name?.touched }} -->
+    <div *ngIf="name?.invalid && name?.touched">
+      <p *ngIf="name?.errors?.['required']">Why to fill this name😉?</p>
+    </div>
+    <input type="number" placeholder="Enter the targetamount" formControlName="targetamount" />
+  
+    <!-- {{ "Invalid: " + date?.invalid }} {{ "Touched: " + date?.touched }} -->
+    <div *ngIf="targetamount?.invalid && targetamount?.touched">
+      <p *ngIf="targetamount?.errors?.['required']">Why to fill this targetamount😉?</p>
+    </div>
+  
+    <input type="date" placeholder="Enter your targetdate" formControlName="targetdate" />
+    <!-- <p *ngIf="nameForm.get('age')?.errors?.['required']">
+      Why to fill this age 😉?
+    </p> -->
+  
+    <!-- {{ "Invalid: " + age?.invalid }} {{ "Touched: " + age?.touched }} -->
+    <!-- Error && Touch => Better UX  -->
+    <div *ngIf="targetdate?.invalid && targetdate?.touched">
+      <p *ngIf="targetdate?.errors?.['required']">Why to fill this targetdate 😉?</p>
+    </div>
+    <button type="submit" [disabled]="nameForm.invalid">create</button>
+    <button type="submit" [disabled]="nameForm.invalid" color="primary">update</button>
+  </form>
+
