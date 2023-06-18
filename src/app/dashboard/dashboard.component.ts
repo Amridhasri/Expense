@@ -1,10 +1,11 @@
 import { Component,Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { catchError, concatMap, switchMap } from 'rxjs';
 import { DashboardService } from '../dashboard.service';
 export interface Movie {
   balance:number,
   name :string,
- id : number,
+  id : string,
  trans:string,
   amount:number,
   date:number,

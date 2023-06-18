@@ -1,0 +1,8 @@
+[
+  { "category": "Rent", "targetAmount": "1000", "Date": "3-4-2023" },
+  {
+    "category": "Rent",
+    "targetAmount": "1000",
+    "Date": "12-3-2023"
+  }
+]
