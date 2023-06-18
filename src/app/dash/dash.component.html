@@ -1,11 +1,20 @@
+<body class="bg-color"><div class="card"><p>Balance:{{trans.balance}}</p>
+    <p>Amount transfered to {{trans.name}}</p>
+    <p>Transaction-Id:{{trans.id}}</p>
+    <p>Transfered-Amount:{{trans.amount}}</p>
+    <p>Transaction-made:{{trans.trans}}</p>
+    <p>Date of transaction:{{trans.date}}</p>
+    <p>category:{{trans.category}}</p>
+    <p><button (click)="delMovie(trans.id)" class="del" mat-raised-button
+        color="warn"
+        type="submit">Delete</button></p>
+    <p><button (click)=" goToDetails(trans.id)" class="del" mat-raised-button
+        color="accent"
+        type="submit">update</button></p>
+</div>
+    </body>
+ 
 
 
-<p>Balance:{{trans.balance}}</p>
-<p>Name:{{trans.name}}</p>
-<p>Id:{{trans.id}}</p>
-<p>Amount:{{trans.amount}}</p>
-<p>Transaction made:{{trans.trans}}</p>
-<p>Date of transaction:{{trans.date}}</p>
-<p>category:{{trans.category}}</p>
-<Br><br>
+
     

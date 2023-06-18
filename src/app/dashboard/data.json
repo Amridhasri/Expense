@@ -1,0 +1,29 @@
+[
+  {
+    "balance": 20000,
+    "name": "Vikram",
+    "id": "34",
+    "trans": "debited",
+    "amount": 6000,
+    "date": "5-5-2022",
+    "category": "food"
+  },
+  {
+    "balance": 14000,
+    "name": "surya",
+    "id": "45",
+    "trans": "debited",
+    "amount": 7000,
+    "date": "6-5-2022",
+    "category": "Rent"
+  },
+  {
+    "balance": 7000,
+    "name": "devi",
+    "id": "67",
+    "trans": "debited",
+    "amount": 3000,
+    "date": "28-5-2022",
+    "category": "entertainment"
+  }
+]

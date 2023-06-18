@@ -1,0 +1,10 @@
+.nav-links-container {
+    background-color: blue;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .color{
+    color: white;
+  }

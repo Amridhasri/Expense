@@ -1,0 +1,12 @@
+<body class="bg-color"><div class="card">
+    <p>category:{{tran.category}}</p>
+    <p>TargetAmount:{{tran.targetamount}}</p>
+    <p>TargetDate:{{tran.targetdate}}</p>
+    <p><button (click)="delsaving(tran.id)" class="del" mat-raised-button
+        color="warn"
+        type="submit">Delete</button></p>
+    <p><button class="del" mat-raised-button
+        color="accent"
+        type="submit"(click)=" goToDetail(tran.id)">update</button></p>
+    </div>
+    <Br><br></body>

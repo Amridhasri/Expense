@@ -1,0 +1,12 @@
+.center
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.clr{
+    /* background-color:rgb(34, 255, 0); */
+    background: linear-gradient(90deg,rgb(226, 43, 70),rgb(33, 225, 46));
+}

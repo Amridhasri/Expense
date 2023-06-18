@@ -1,26 +1,53 @@
-<form [formGroup]="nameForm" (ngSubmit)="onSubmit()">
-    <input type="date" placeholder="Enter the date" formControlName="date" />
+<body class="bd"><div class="form"><form [formGroup]="nameForm" (ngSubmit)="onSubmit()" class="form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Amount</mat-label>
+  <input type="number" matInput placeholder="Enter the amount" formControlName="amount" required/>
+  <mat-error *ngIf="amount?.errors?.['required']">
+    This field is required,please fill it!
+  </mat-error>
+</mat-form-field>
+  <!-- {{ "Invalid: " + date?.invalid }} {{ "Touched: " + date?.touched }} -->
+  <!-- <div *ngIf="amount?.invalid && amount?.touched">
+    <p *ngIf="amount?.errors?.['required']">This field is required,please fill it!</p> -->
+  <!-- </div> <br> <br> -->
   
-    <!-- {{ "Invalid: " + date?.invalid }} {{ "Touched: " + date?.touched }} -->
-    <div *ngIf="date?.invalid && date?.touched">
-      <p *ngIf="date?.errors?.['required']">Why to fill this date😉?</p>
-    </div>
-    <input type="number" placeholder="Enter the amount" formControlName="amount" />
-  
-    <!-- {{ "Invalid: " + date?.invalid }} {{ "Touched: " + date?.touched }} -->
-    <div *ngIf="amount?.invalid && amount?.touched">
-      <p *ngIf="amount?.errors?.['required']">Why to fill this amount😉?</p>
-    </div>
-  
-    <input type="text" placeholder="Enter your category" formControlName="category" />
-    <!-- <p *ngIf="nameForm.get('age')?.errors?.['required']">
-      Why to fill this age 😉?
-    </p> -->
-  
-    <!-- {{ "Invalid: " + age?.invalid }} {{ "Touched: " + age?.touched }} -->
-    <!-- Error && Touch => Better UX  -->
-    <div *ngIf="category?.invalid && category?.touched">
-      <p *ngIf="category?.errors?.['required']">Why to fill this category 😉?</p>
-    </div>
-    <button type="submit" [disabled]="nameForm.invalid">create</button>
-  </form>
+  <mat-form-field class="example-full-width">
+    <mat-label>category</mat-label>
+  <input type="text"  matInput placeholder="Enter your category" formControlName="category" />
+  <!-- <p *ngIf="nameForm.get('age')?.errors?.['required']">
+    Why to fill this age 😉?
+  </p> -->
+  <mat-error *ngIf="category?.errors?.['required']">
+    This field is required,please fill it!
+  </mat-error>
+</mat-form-field>
+  <!-- {{ "Invalid: " + age?.invalid }} {{ "Touched: " + age?.touched }} -->
+  <!-- Error && Touch => Better UX  -->
+  <!-- <div *ngIf="category?.invalid && category?.touched">
+    <p *ngIf="category?.errors?.['required']">This field is required,please fill it!</p>
+  </div> <br> <br> -->
+ 
+  <mat-form-field class="example-full-width">
+    <mat-label>Date</mat-label>
+  <input type="date"  matInput placeholder="Enter the date" formControlName="date" />
+  <mat-error *ngIf="date?.errors?.['required']">
+    This field is required,please fill it!
+  </mat-error>
+</mat-form-field>
+  <!-- {{ "Invalid: " + date?.invalid }} {{ "Touched: " + date?.touched }} -->
+  <!-- <div *ngIf="date?.invalid && date?.touched">
+    <p *ngIf="date?.errors?.['required']">This field is required,please fill it!</p>
+  </div> <br> <br> -->
+  <button
+  mat-raised-button
+  color="accent"
+  type="submit"
+  [disabled]="nameForm.invalid"
+>
+ create
+</button>
+<br>
+<!-- <button (click)="delMovie(trans.id)">Delete</button> -->
+  <!-- <button type="submit" [disabled]="nameForm.invalid">create</button> -->
+</form>
+</div></body>

@@ -1,7 +1,7 @@
-<h1>
+<body class="clr"><h1>
     Welcome to the dashboard!
 </h1><br>
-<p><b>Financial status:</b></p>
-<app-dash *ngFor="let mv of movieList$|async" [trans]="mv"(delete)="deleteGetMovie($event)"></app-dash>
-
-<p>Goals towards saving is increased!!👌</p>
+<h2 class="center"><b>Financial status:</b></h2>
+<app-dash *ngFor="let mv of movieList$|async" [trans]="mv" (delete)="deleteGetMovie($event)"></app-dash>
+<!-- <app-dash *ngFor="let mv of movieList$|async" [trans]="mv" ></app-dash> -->
+<p class="center">Goals towards saving is increased!!👌</p></body>

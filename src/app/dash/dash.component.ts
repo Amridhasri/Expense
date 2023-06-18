@@ -1,5 +1,6 @@
 import { Component,Input,Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-dash',
   templateUrl: './dash.component.html',
@@ -7,9 +8,11 @@ import { Router } from '@angular/router';
 })
 export class DashComponent {
 @Input() trans=
-{balance:20000,
+
+{
+  balance:20000,
   name :'Vikram',
- id : 22345667888,
+  id : "456",
  trans:"debited",
   amount:400,
   date:"5-5-2022",
@@ -17,21 +20,36 @@ export class DashComponent {
  };
  @Output() delete = new EventEmitter<string>();
 
-  show = true;
+ 
 
   constructor(private router: Router) {}
 
-  
+  routemethod(){
+    this.router.navigate(['/update/:id']);
+  }
 
   // Step 2
   delMovie(id: string) {
-    console.log('Emitting...', id);
+   
     // To parent component
     this.delete.emit(id);
   }
+  
+  
+  // onSubmit() {
+  //   console.log(this.nameForm.status);
+
+  //   if (this.nameForm.valid) {
+  //     const updatedMovie = this.nameForm.value;
+      
+  //     this.dashboardService.updateMovie(updatedMovie as any).subscribe(() => {
+  //       this.router.navigate(['/dashboard']);
+  //     });
+  //   }
+  // }
 
   goToDetails(id: string) {
-    this.router.navigate([`/dashboard/${id}`]);
+    this.router.navigate([`/update/${id}`]);
   }
 }
 

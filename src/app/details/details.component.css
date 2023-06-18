@@ -1,12 +1,13 @@
 .card {
     background: linear-gradient(100deg,rgb(226, 43, 159),rgb(51, 0, 255));
-    border-radius: 50px;
-    padding: 20px;
-    min-height: 30vh;
+    border-radius: 40px;
+    padding: 16px;
   }
   .bg-color{
-    /* background:rgb(209, 200, 80); */
-    background: linear-gradient(100deg,rgb(209, 200, 80),rgb(255, 0, 225));
+    /* background:rgb(80, 177, 209); */
+    /* background: linear-gradient(90deg,rgb(226, 43, 70),rgb(33, 225, 46)); */
+    /* background: linear-gradient(90deg,lightpink,rgb(33, 225, 46)); */
+    background:pink;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,0 +1,7 @@
+.form {background-color: blueviolet;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }

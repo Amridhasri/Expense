@@ -4,12 +4,31 @@
 <app-saving-form></app-saving-form> -->
 <header>
   <nav>
-    <ul class="nav-links-container">
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/dashboard">dashboard</a></li>
-      <li><a routerLink="/Transactionform">Transactionform</a></li>
-      <li><a routerLink="/savingform">savingform</a></li>
-    </ul>
+    <div class="nav-links-container">
+     
+        <p class="color" style="color: white;">
+          <a routerLink="/home"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></a></p>
+        <p class="color"><a routerLink="/dashboard">dashboard</a></p>
+        <p class="color"><a routerLink="/Transactionform">Expenses</a></p>
+        <p class="color"><a routerLink="/savingform">saving-plan</a></p>
+        <p class="color"><a routerLink="/detailspage">saving-plan-details</a></p>
+        <!-- <p>
+          <mat-toolbar>
+            <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+            <mat-menu #menu="matMenu">
+              <a routerLink="/dashboard">x<button mat-menu-item>dashboard</button></a>
+              <a routerLink="/Transactionform"><button mat-menu-item>expenses</button></a>
+              <a routerLink="/savingform"> <button mat-menu-item>saving-plan</button></a>
+              <a routerLink="/detailspage"><button mat-menu-item>saving-plan-details</button></a>
+            </mat-menu>
+            <p class="color" >
+        <a routerLink="/home"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></a></p>
+        
+            </mat-toolbar>  -->
+         
+    </div>
+    
+  
   </nav>
 </header>
 <router-outlet></router-outlet>
