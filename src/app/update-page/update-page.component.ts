@@ -15,6 +15,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UpdatePageComponent {
   nameForm = this.fb.group({
+    id:'',
     category: ['', Validators.required],
     targetamount: ['', Validators.required],
      targetdate: ['', Validators.required],

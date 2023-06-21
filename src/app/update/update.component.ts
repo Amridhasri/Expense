@@ -16,6 +16,7 @@ import { DashboardService } from '../dashboard.service';
 })
 export class UpdateComponent {
   nameForm = this.fb.group({
+    id:'',
     date: ['', Validators.required],
     amount: ['', Validators.required],
      category: ['', Validators.required],
